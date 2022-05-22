@@ -55,8 +55,8 @@ class ContactsController < ApplicationController
 
     def set_type
       case params[:type]
-      when 'Parent'
-        'parent'
+      when 'Teacher'
+        'teacher'
       when 'Friend'
         'friend'
       end
