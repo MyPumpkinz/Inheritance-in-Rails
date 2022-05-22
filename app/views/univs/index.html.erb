@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Univs</h1>
+
+<div id="univs">
+  <% @univs.each do |univ| %>
+    <%= render univ %>
+    <p>
+      <%= link_to "Show this univ", univ %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New univ", new_univ_path %>
