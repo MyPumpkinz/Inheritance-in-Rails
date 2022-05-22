@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_22_060513) do
+ActiveRecord::Schema.define(version: 2022_05_22_062112) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "type"
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "faculty"
+    t.string "student_id_number"
+    t.string "national_lecturer_identification_number"
+    t.string "last_position"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["type", "user_id"], name: "index_contacts_on_type_and_user_id"
+  end
 
   create_table "univs", force: :cascade do |t|
     t.string "name"
