@@ -32,6 +32,12 @@
   </div>
 
   <div>
+    <%= form.label :univ_id, style: "display: block" %>
+    <%= collection_select(:user, :univ_id, Univ.all, :id, :name, {}, { :multiple => false}) %>
+  </div>
+
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
