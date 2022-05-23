@@ -11,33 +11,33 @@
     </div>
   <% end %>
 
-  <div >
+  <div class="col-sm-2 col-form-label">
     <%= form.label :first_name, style: "display: block" %>
     <%= form.text_field :first_name %>
   </div>
 
-  <div >
+  <div class="col-sm-2 col-form-label">
     <%= form.label :last_name, style: "display: block" %>
     <%= form.text_field :last_name %>
   </div>
 
-  <div >
+  <div class="col-sm-2 col-form-label">
     <%= form.label :email, style: "display: block" %>
     <%= form.text_field :email %>
   </div>
 
-  <div >
+  <div class="col-sm-2 col-form-label">
     <%= form.label :address, style: "display: block" %>
     <%= form.text_field :address %>
   </div>
 
-  <div >
+  <div class="col-sm-2 col-form-label">
     <%= form.label :univ_id, style: "display: block" %>
     <%= collection_select(:user, :univ_id, Univ.all, :id, :name, {}, { :multiple => false}) %>
   </div>
 
 
-  <div >
-    <%= form.submit%>
+  <div class="col-sm-2 col-form-label">
+    <%= form.submit :Submit, class: 'btn btn-success'%>
   </div>
 <% end %>

@@ -3,68 +3,75 @@
 <%= render @user %>
 
 <div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  <%= link_to "Edit this user", edit_user_path(@user), class:'btn btn-primary'  %> |
+  <%= link_to "Back to users", users_path, class:'btn btn-warning'  %>
+  <%= button_to "Destroy this user", @user, method: :delete, class:'btn btn-danger' %>
 </div>
 
 <h1>Contact Teacher</h1>
-<%= link_to 'New', new_user_teacher_path(@user) %>
-<table class='table'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Faculty</th>
-      <th>Student Id Number</th>
-      <th>National Lecturer Identification Number</th>
-      <th>Last Position</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user.teachers.each do |contact| %>
-      <tr>
-        <td><%= contact.name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= contact.faculty %></td>
-        <td><%= contact.student_id_number %></td>
-        <td><%= contact.national_lecturer_identification_number %></td>
-        <td><%= contact.last_position %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to 'New', new_user_teacher_path(@user), class:'btn btn-primary'  %>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Faculty</th>
+          <th>Student Id Number</th>
+          <th>National Lecturer Identification Number</th>
+          <th>Last Position</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @user.teachers.each do |contact| %>
+          <tr>
+            <td><%= contact.name %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.phone %></td>
+            <td><%= contact.faculty %></td>
+            <td><%= contact.student_id_number %></td>
+            <td><%= contact.national_lecturer_identification_number %></td>
+            <td><%= contact.last_position %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <h1>Contact Friend</h1>
-<%= link_to 'New', new_user_friend_path(@user) %>
-<table class='table'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Faculty</th>
-      <th>Student Id Number</th>
-      <th>National Lecturer Identification Number</th>
-      <th>Last Position</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user.friends.each do |contact| %>
-      <tr>
-        <td><%= contact.name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= contact.faculty %></td>
-        <td><%= contact.student_id_number %></td>
-        <td><%= contact.national_lecturer_identification_number %></td>
-        <td><%= contact.last_position %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to 'New', new_user_friend_path(@user), class:'btn btn-primary'  %>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Faculty</th>
+          <th>Student Id Number</th>
+          <th>National Lecturer Identification Number</th>
+          <th>Last Position</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @user.friends.each do |contact| %>
+          <tr>
+            <td><%= contact.name %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.phone %></td>
+            <td><%= contact.faculty %></td>
+            <td><%= contact.student_id_number %></td>
+            <td><%= contact.national_lecturer_identification_number %></td>
+            <td><%= contact.last_position %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>        
