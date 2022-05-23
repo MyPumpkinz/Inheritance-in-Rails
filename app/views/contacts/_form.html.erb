@@ -11,42 +11,42 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :email, style: "display: block" %>
     <%= form.text_field :email %>
   </div>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :phone, style: "display: block" %>
     <%= form.text_field :phone %>
   </div>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :faculty, style: "display: block" %>
     <%= form.text_field :faculty %>
   </div>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :student_id_number, style: "display: block" %>
     <%= form.text_field :student_id_number %>
   </div>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :national_lecturer_identification_number, style: "display: block" %>
     <%= form.text_field :national_lecturer_identification_number %>
   </div>
 
-  <div>
+  <div class="col-sm-2 col-form-label">
     <%= form.label :last_position, style: "display: block" %>
     <%= form.text_field :last_position %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="col-sm-2 col-form-label">
+    <%= form.submit :Submit, class: 'btn btn-success' %>
   </div>
 <% end %>
