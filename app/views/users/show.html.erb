@@ -5,7 +5,9 @@
 <div>
   <%= link_to "Edit this user", edit_user_path(@user), class:'btn btn-primary'  %> |
   <%= link_to "Back to users", users_path, class:'btn btn-warning'  %>
-  <%= button_to "Destroy this user", @user, method: :delete, class:'btn btn-danger' %>
+  <div class="btndelete"> 
+    <%= button_to "Destroy this user", @user, method: :delete, class:'btn btn-danger' %>
+  </div>      
 </div>
 
 <h1>Contact Teacher</h1>
