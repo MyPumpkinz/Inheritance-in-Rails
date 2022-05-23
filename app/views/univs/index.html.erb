@@ -2,13 +2,29 @@
 
 <h1>Univs</h1>
 
-<div id="univs">
-  <% @univs.each do |univ| %>
-    <%= render univ %>
-    <p>
-      <%= link_to "Show this univ", univ %>
-    </p>
-  <% end %>
-</div>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>University Name</th>
+          <th colspan=3>Action</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @univs.each do |univ| %>
+          <tr>
+            <td><%= univ.name %></td>
+            <td><%= link_to 'Show', univ, class: 'btn btn-info' %></td>
+            <td><%= link_to 'Edit', edit_univ_path(univ), class: 'btn btn-primary' %></td>
+            <td><%= button_to "Delete", univ, method: :delete, class:'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to "New univ", new_univ_path, class: 'btn btn-outline-dark' %>
+    <%= link_to "Back to users", users_path, class:'btn btn-warning'  %>
 
-<%= link_to "New univ", new_univ_path %>
+  </div>
+</div>
